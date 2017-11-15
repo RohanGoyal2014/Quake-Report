@@ -2,6 +2,7 @@ package com.example.android.quakereport;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,7 @@ public class NetworkConnectionLoaderThread extends AsyncTaskLoader<ArrayList<ent
 
     @Override
     public ArrayList<entity> loadInBackground() {
+        Log.e("Loader","Inside loadinbackground--------------------------");
         if(murl==null)
         {
             return null;
